@@ -20,10 +20,27 @@ import { Component, OnInit } from '@angular/core';
   // it's an array because it's possible get style from more than one file
 })
 export class ServersComponent implements OnInit {
+  allowNewServer = false;
+  serverCreationStatus = "No server was created!";
+  serverName = "No Name";
 
-  constructor() { }
+  constructor() { 
+
+    setTimeout(()=>{
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
   ngOnInit(): void {
+  }
+
+  onCreateServer(){
+    this.serverCreationStatus = "Server was created! Name is " + this.serverName;
+  }
+
+  onUpdateServerName(event: any){
+    this.serverName = (<HTMLInputElement>event.target).value;
+    // explicit the type of value
   }
 
 }

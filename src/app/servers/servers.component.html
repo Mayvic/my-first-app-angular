@@ -1,1 +1,43 @@
-<p>Servers</p>
+<label> Server Name </label>
+<br>
+<!-- input 1 -->
+<!-- <input 
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)"
+> -->
+<!-- $event take of the event of ocurred -->
+<br>
+<!-- input 2 -->
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName"
+>
+<!-- Two Data Binding: Works updating the value in code and in screen
+    works as both binding together
+    if write on screen in input 1 the value will to input 2 
+    but if write on screen in input 2 the value don't will to input 1 
+    because the input 1 don't use the Two Data Binding so isn't updated   -->
+
+<br>
+<p>{{ serverName }}</p>
+<button
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"  
+    (click)="onCreateServer()"
+> 
+<!-- Data Biding: braces means the value is from the TS file -->
+<!-- Event Binding: parentheses means the capture of event
+    it's allow to use code directly here, but only a simple one  -->
+Add Server </button>
+
+<p [innerText]="allowNewServer"></p>
+<!-- change the text propriety of paragraph
+    when needs to show a text use string interpolation
+    when needs to change a propriety use data binding
+-->
+
+<p>
+    {{serverCreationStatus}}
+</p>
