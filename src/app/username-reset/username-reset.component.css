@@ -1,0 +1,10 @@
+.btn{
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.btn-primary{
+    background-color: rgba(0, 0, 255, 0.5);
+    color: white;
+    font-size: 18px;
+}
