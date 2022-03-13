@@ -1,1 +1,18 @@
-<p>Server</p>
+<p 
+    [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}"
+>
+    {{"Server"}} with ID {{ serverId}} is {{ getServerStatus()}}
+</p>
+<!-- ~~~~~~~~ DIRECTIVE ngStyle ~~~~~~~~ -->
+<!-- The directive allows change the style
+    it's usage is "property-name" or propertyName 
+
+    DON'T NEEDS BRACKETS-->
+<!-- ~~~~~~~~ DIRECTIVE ngClass ~~~~~~~~ -->
+<!-- Its struct is {<className>: <true or false>} 
+    with it it is possible to place a class on the element based on a condition
+
+    it only adds like CSS class if a certain condition is true-->
+<!-- ~~~~~~~~ PROPERTY BINDING ~~~~~~~~ -->
+<!-- because this it's necessary put braces in ngStyle-->
