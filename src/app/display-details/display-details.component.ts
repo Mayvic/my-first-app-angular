@@ -14,12 +14,11 @@ export class DisplayDetailsComponent implements OnInit {
   }
 
   addDetail(){
-    this.clicks.push(this.clicks.length);
-    console.log("clicks", this.clicks);
+    this.clicks.push(this.clicks.length + 1);
   }
 
-  getColor(item: any){
-    return item > 4 ? 'pink' :'white';
+  getColor(index: any){
+    return index >= 4 ? 'pink' :'transparent';
   }
 
 }

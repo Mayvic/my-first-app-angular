@@ -11,9 +11,12 @@
     Button Clicked
 </p>
 <p
-    *ngFor="let click of clicks"
-    [ngStyle]="{backgroundColor: getColor(click)}"
-    [ngClass]="{textColor: click > 4}"
+    *ngFor="let click of clicks; let i = index"
+    [ngStyle]="{backgroundColor: getColor(i)}"
+    [ngClass]="{textColor: i >= 4}"
 >
 {{click}}
 </p>
+<!-- ~~~~~~~~~~~ DIRECTIVE *ngFor WITH INDEX ~~~~~~~~~~~ -->
+<!-- To capture the index of items in *ngFor, it needs to be like this 
+    let i = index   -->
