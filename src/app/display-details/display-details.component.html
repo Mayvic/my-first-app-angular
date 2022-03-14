@@ -1,0 +1,19 @@
+<button
+    (click)="addDetail()"    
+>
+    Display Details
+</button>
+
+
+<p 
+    *ngIf="clicks.length"
+>
+    Button Clicked
+</p>
+<p
+    *ngFor="let click of clicks"
+    [ngStyle]="{backgroundColor: getColor(click)}"
+    [ngClass]="{textColor: click > 4}"
+>
+{{click}}
+</p>
